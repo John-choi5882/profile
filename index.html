@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>프로필|최요한 개발 포트폴리오</title>
+  <title>최요한 | Unity Game Developer Portfolio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -11,9 +11,10 @@
   <header class="topbar">
     <div class="logo">Yohan Portfolio</div>
     <nav>
-      <a href="#about">프로필</a>
-      <a href="#skills">기술 스택</a>
-      <a href="#projects">프로젝트</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
@@ -24,120 +25,153 @@
         <div class="profile-img">YH</div>
         <h2>최요한</h2>
         <p class="job">Unity Game Developer</p>
-        <p>가난한 원대생</p>
+        <p class="desc">
+          Unity와 C#을 기반으로 2D 게임 시스템을 구현하며 성장하고 있는 클라이언트 개발자 지망생입니다.
+        </p>
+
+        <div class="profile-info">
+          <p><strong>Focus</strong> Game Client</p>
+          <p><strong>Engine</strong> Unity</p>
+          <p><strong>Language</strong> C#</p>
+        </div>
 
         <div class="links">
           <a href="https://github.com/John-choi5882" target="_blank">GitHub Profile</a>
-          <a href="#">Project Repository</a>
-          <a href="#">Portfolio PDF</a>
+          <a href="#" target="_blank">Project Repository</a>
+          <a href="#" target="_blank">Portfolio PDF</a>
         </div>
       </div>
     </aside>
 
     <section class="content">
       <section id="about" class="section hero">
-        <h1>최요한   Yohan Choi<h1/>
-        <h3>Unity --를 목표로 준비 중입니다.</h3>
+        <p class="badge">Unity Game Client Portfolio</p>
+        <h1>최요한 <span>Yohan Choi</span></h1>
+        <h3>게임의 플레이 경험을 직접 구현하는 Unity 클라이언트 개발자를 목표로 준비하고 있습니다.</h3>
         <p>
-          안녕하세요. 미래를 보며 나아가는 최요한입니다.
+          Unity와 C#을 활용하여 플레이어 조작, 전투, 몬스터 AI, 보스 패턴, UI, 아이템 시스템 등
+          실제 게임 플레이에 필요한 클라이언트 기능을 직접 구현해왔습니다.
         </p>
+
+        <div class="hero-buttons">
+          <a href="#projects">프로젝트 보기</a>
+          <a href="#contact" class="outline">연락처 보기</a>
+        </div>
       </section>
 
       <section class="section">
-        <h2>자기 소개</h2>
-        <ul>
-          <li>Unity 기반 2D 게임 개발 프로젝트를 진행했습니다.</li>
-          <li>C# 스크립트를 활용하여 플레이어, 전투, 상호작용 시스템을 구현했습니다.</li>
-          <li>GitHub를 활용한 프로젝트 관리와 협업 경험이 있습니다.</li>
-          <li>AI 및 에셋스토어 리소스를 활용하여 아트 리소스 부족 문제를 해결했습니다.</li>
-        </ul>
+        <h2>자기소개</h2>
+        <div class="intro-grid">
+          <div>
+            <h3>Game Client</h3>
+            <p>플레이어가 직접 체감하는 조작감, 전투, UI, 상호작용 기능 구현에 관심이 있습니다.</p>
+          </div>
+          <div>
+            <h3>Unity & C#</h3>
+            <p>Rigidbody2D, Collider2D, Prefab, ScriptableObject, UI 시스템을 활용한 개발 경험이 있습니다.</p>
+          </div>
+          <div>
+            <h3>Problem Solving</h3>
+            <p>개발 중 발생한 충돌, 피격 판정, 무기 교체, UI 연동 문제를 해결하며 프로젝트를 개선했습니다.</p>
+          </div>
+        </div>
       </section>
 
       <section id="skills" class="section">
         <h2>기술 스택</h2>
 
-        <div class="skill-box">
-          <h3>C#</h3>
-          <p>Unity 게임 로직, 플레이어 이동, 공격, 피격, 아이템 처리 구현</p>
-        </div>
+        <div class="skill-list">
+          <div class="skill-box">
+            <h3>Unity</h3>
+            <p>2D 탑다운 게임 제작, Prefab, Scene, UI, Physics2D 기반 게임 기능 구현</p>
+          </div>
 
-        <div class="skill-box">
-          <h3>Unity</h3>
-          <p>2D 탑다운 게임 제작, Rigidbody2D, Collider2D, UI, Prefab 시스템 활용</p>
-        </div>
+          <div class="skill-box">
+            <h3>C#</h3>
+            <p>플레이어 이동, 공격, 피격, 아이템, 몬스터 AI, 보스 패턴 로직 구현</p>
+          </div>
 
-        <div class="skill-box">
-          <h3>Git / GitHub</h3>
-          <p>프로젝트 버전 관리, 저장소 관리, GitHub Pages 포트폴리오 제작</p>
-        </div>
+          <div class="skill-box">
+            <h3>ScriptableObject</h3>
+            <p>무기 데이터, 아이템 데이터, 능력치 관리 구조 제작</p>
+          </div>
 
-        <div class="skill-box">
-          <h3>HTML / CSS</h3>
-          <p>개인 포트폴리오 웹사이트 제작 및 배포</p>
+          <div class="skill-box">
+            <h3>Git / GitHub</h3>
+            <p>프로젝트 버전 관리, 협업 경험, GitHub Pages 포트폴리오 배포</p>
+          </div>
         </div>
       </section>
 
       <section id="projects" class="section">
-        <h2>최근 프로젝트</h2>
+        <h2>주요 프로젝트</h2>
 
         <article class="project-card">
-          <div class="thumb">2D Roguelike(텍스트 삭제 후 사진 첨부)</div>
+          <div class="thumb">이미지 추가 예정</div>
           <div>
+            <p class="project-type">Unity / C# / 2D Roguelike Action</p>
             <h3>2D 로그라이크 액션 게임</h3>
-            <p class="sub">Unity / C# / Top-down Action</p>
             <p>
               랜덤 요소를 기반으로 던전을 탐험하고 몬스터를 처치하며,
-              무기와 아이템을 활용해 성장하는 2D 로그라이크 액션 게임입니다.
+              무기와 아이템을 활용해 성장하는 2D 탑다운 로그라이크 액션 게임입니다.
             </p>
             <ul>
-              <li>플레이어 이동, 피격, 체력 UI 구현</li>
-              <li>플레이어와 NPC간 상호작용 시스템 구현</li>
-              <li>상점, 신전, 골드, 아이템 드랍 시스템 제작</li>
-              <li>아이템 능력치 및 획득, 사용 시스템 제작</li>
+              <li>플레이어 이동, 대시, 피격 무적, 체력 UI 구현</li>
+              <li>근접 무기와 원거리 무기 시스템 구현</li>
+              <li>몬스터 AI, 보스 패턴, 아이템 드랍 시스템 제작</li>
+              <li>상점, 신전, 골드, 아이템 사용 시스템 구현</li>
             </ul>
           </div>
         </article>
 
         <article class="project-card">
-          <div class="thumb">Boss System(사진 첨부 후 텍스트 삭제)</div>
+          <div class="thumb">Boss System</div>
           <div>
+            <p class="project-type">Unity / Boss Pattern / Telegraph Attack</p>
             <h3>드래곤 보스전 시스템</h3>
-            <p class="sub">Unity / Boss Pattern / Telegraph Attack</p>
             <p>
-              공격 범위를 미리 표시한 뒤 일정 시간 후 피해를 주는 보스 패턴을 구현했습니다.
+              공격 범위를 먼저 표시한 뒤 일정 시간 후 피해를 주는 텔레그래프 방식의 보스 패턴을 구현했습니다.
             </p>
             <ul>
               <li>랜덤 위치 공격 범위 생성</li>
               <li>예고 범위 표시 후 데미지 판정</li>
-              <li>브레스, 할퀴기 등 보스 패턴 구성</li>
+              <li>브레스, 할퀴기 등 보스 공격 패턴 구성</li>
             </ul>
           </div>
         </article>
       </section>
 
-      <section class="section">
+      <section id="experience" class="section">
         <h2>메인 구현 경험</h2>
 
-        <div class="mini-project">
-          <h3>Player System</h3>
-          <p>WASD 이동, 마우스 조준, 대시, 피격 무적, 체력 UI 구현</p>
-          <span>Unity</span><span>C#</span><span>UI</span>
-        </div>
+        <div class="experience-grid">
+          <div class="mini-project">
+            <h3>Player System</h3>
+            <p>WASD 이동, 마우스 조준, 대시, 피격 무적, 체력 UI 구현</p>
+            <span>Unity</span><span>C#</span><span>UI</span>
+          </div>
 
-        <div class="mini-project">
-          <h3>Weapon System</h3>
-          <p>검, 창, 쌍검, SMG, Rifle, Shotgun 등 무기별 공격 방식 구현</p>
-          <span>ScriptableObject</span><span>Prefab</span><span>Combat</span>
-        </div>
+          <div class="mini-project">
+            <h3>Weapon System</h3>
+            <p>검, 창, 쌍검, SMG, Rifle, Shotgun 등 무기별 공격 방식 구현</p>
+            <span>ScriptableObject</span><span>Prefab</span><span>Combat</span>
+          </div>
 
-        <div class="mini-project">
-          <h3>Monster AI</h3>
-          <p>순찰, 추적, 원거리 공격, 폭발형 몬스터, 보스 패턴 구현</p>
-          <span>AI</span><span>Rigidbody2D</span><span>Collider2D</span>
+          <div class="mini-project">
+            <h3>Monster AI</h3>
+            <p>순찰, 추적, 원거리 공격, 폭발형 몬스터, 보스 패턴 구현</p>
+            <span>AI</span><span>Rigidbody2D</span><span>Collider2D</span>
+          </div>
+
+          <div class="mini-project">
+            <h3>UI & Interaction</h3>
+            <p>체력 UI, 상점 UI, NPC 상호작용, 아이템 획득 및 사용 시스템 구현</p>
+            <span>UI</span><span>Interaction</span><span>Game System</span>
+          </div>
         </div>
       </section>
 
-      <section id="contact" class="section">
+      <section id="contact" class="section contact">
         <h2>Contact</h2>
         <p>Email: 여기에 이메일 입력</p>
         <p>GitHub: github.com/John-choi5882</p>
