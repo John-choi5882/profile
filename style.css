@@ -268,14 +268,17 @@ nav a.active {
 
 .thumb {
   width: 100%;
-  height: 320px;
+  aspect-ratio: 16 / 9;
   border-radius: 14px;
   background: #ffffff;
   border: 1px solid #e5e7eb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
+}
+
+.thumb a {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .thumb img {
@@ -370,10 +373,6 @@ nav a.active {
   .project-card {
     grid-template-columns: 1fr;
     padding: 24px;
-  }
-
-  .thumb {
-    height: 220px;
   }
 
   .project-card h3 {
