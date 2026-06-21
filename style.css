@@ -36,10 +36,6 @@ body {
   align-items: center;
 }
 
-.logo-icon {
-  display: none;
-}
-
 .logo-text {
   font-size: 20px;
   font-weight: 900;
@@ -236,25 +232,18 @@ nav a.active {
 
 .section h2 {
   margin-top: 0;
-  padding-bottom: 14px;
-  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 28px;
+  padding-left: 16px;
+  border-left: 6px solid #2563eb;
+  border-bottom: none;
   color: #0f172a;
-  font-size: 27px;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1.2;
 }
 
 /* 자기소개 */
-.intro-section h2 {
-  border-bottom: none;
-  padding-bottom: 0;
-  padding-left: 14px;
-  border-left: 6px solid #6d4cc2;
-  font-size: 27px;
-  font-weight: 800;
-  color: #374151;
-}
-
 .intro-list {
-  margin-top: 18px;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -262,7 +251,7 @@ nav a.active {
 
 .intro-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 14px;
   width: 100%;
   padding: 12px 18px;
@@ -279,8 +268,9 @@ nav a.active {
 .intro-arrow {
   font-size: 32px;
   font-weight: 700;
-  color: #6d4cc2;
+  color: #2563eb;
   line-height: 1;
+  padding-top: 1px;
   flex-shrink: 0;
 }
 
@@ -302,8 +292,8 @@ nav a.active {
 .mini-project {
   padding: 22px;
   border-radius: 16px;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  background: #fbfdff;
+  border: 1px solid #dbeafe;
   transition: 0.2s;
 }
 
@@ -328,8 +318,8 @@ nav a.active {
   padding: 32px;
   border-radius: 20px;
   margin-bottom: 34px;
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+  border: 1px solid #dbeafe;
   transition: 0.2s;
 }
 
