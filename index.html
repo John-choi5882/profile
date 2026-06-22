@@ -106,7 +106,7 @@
             </div>
 
             <div class="tech-item">
-              <img src="img/csharp.png" alt="C#">
+              <img src="img/C#.png" alt="C#">
               <strong>C#</strong>
             </div>
           </div>
@@ -162,22 +162,10 @@
         <h2>주요 프로젝트</h2>
 
         <article class="project-card">
-          <div class="project-slider" id="radiantSlider">
-            <div class="slider-images">
-              <img class="slider-image active" src="img/Radiant_abyss.png" alt="Radiant Abyss 메인 화면">
-              <img class="slider-image" src="img/radiant-combat.png" alt="Radiant Abyss 전투 화면">
-              <img class="slider-image" src="img/radiant-shop.png" alt="Radiant Abyss 상점 화면">
-              <img class="slider-image" src="img/radiant-portal.png" alt="Radiant Abyss 포탈 화면">
-              <img class="slider-image" src="img/radiant-boss.png" alt="Radiant Abyss 보스 화면">
-            </div>
-
-            <div class="slider-dots">
-              <button class="slider-dot active" type="button" data-slide="0" aria-label="1번 이미지"></button>
-              <button class="slider-dot" type="button" data-slide="1" aria-label="2번 이미지"></button>
-              <button class="slider-dot" type="button" data-slide="2" aria-label="3번 이미지"></button>
-              <button class="slider-dot" type="button" data-slide="3" aria-label="4번 이미지"></button>
-              <button class="slider-dot" type="button" data-slide="4" aria-label="5번 이미지"></button>
-            </div>
+          <div class="thumb">
+            <a href="img/Radiant_abyss.png" target="_blank">
+              <img src="img/Radiant_abyss.png" alt="Radiant Abyss 게임 이미지">
+            </a>
           </div>
 
           <div>
@@ -277,50 +265,5 @@
       </section>
     </section>
   </main>
-
-  <script>
-    const slider = document.getElementById("radiantSlider");
-    const slides = slider.querySelectorAll(".slider-image");
-    const dots = slider.querySelectorAll(".slider-dot");
-
-    let currentSlide = 0;
-    let slideTimer;
-
-    function showSlide(index) {
-      slides[currentSlide].classList.remove("active");
-      dots[currentSlide].classList.remove("active");
-
-      currentSlide = index;
-
-      slides[currentSlide].classList.add("active");
-      dots[currentSlide].classList.add("active");
-    }
-
-    function nextSlide() {
-      const next = (currentSlide + 1) % slides.length;
-      showSlide(next);
-    }
-
-    function startSlider() {
-      slideTimer = setInterval(nextSlide, 3000);
-    }
-
-    function stopSlider() {
-      clearInterval(slideTimer);
-    }
-
-    dots.forEach((dot) => {
-      dot.addEventListener("click", () => {
-        stopSlider();
-        showSlide(Number(dot.dataset.slide));
-        startSlider();
-      });
-    });
-
-    slider.addEventListener("mouseenter", stopSlider);
-    slider.addEventListener("mouseleave", startSlider);
-
-    startSlider();
-  </script>
 </body>
 </html>
