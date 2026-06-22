@@ -17,15 +17,16 @@ body {
   color: #1f2937;
 }
 
+/* 상단바 */
 .topbar {
   height: 76px;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid #e5e7eb;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 80px;
+  gap: 64px;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -45,7 +46,7 @@ body {
 
 nav {
   display: flex;
-  gap: 44px;
+  gap: 34px;
 }
 
 nav a {
@@ -64,6 +65,7 @@ nav a.active {
   border-bottom: 3px solid #2563eb;
 }
 
+/* 전체 레이아웃 */
 .container {
   max-width: 1180px;
   margin: 42px auto;
@@ -79,6 +81,10 @@ nav a.active {
   top: 105px;
 }
 
+.content {
+  min-width: 0;
+}
+
 .profile-card,
 .section {
   background: #ffffff;
@@ -87,6 +93,23 @@ nav a.active {
   box-shadow: 0 12px 34px rgba(15, 23, 42, 0.07);
 }
 
+.section {
+  padding: 36px;
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  margin-top: 0;
+  margin-bottom: 28px;
+  padding-left: 16px;
+  border-left: 6px solid #2563eb;
+  color: #0f172a;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+/* 프로필 카드 */
 .profile-card {
   padding: 30px;
   text-align: center;
@@ -170,13 +193,11 @@ nav a.active {
   transform: translateY(-2px);
 }
 
-.content {
-  min-width: 0;
-}
-
-.section {
-  padding: 36px;
-  margin-bottom: 30px;
+/* 히어로 */
+.hero {
+  background:
+    radial-gradient(circle at top right, rgba(37, 99, 235, 0.12), transparent 36%),
+    linear-gradient(135deg, #ffffff 0%, #eff6ff 100%);
 }
 
 .badge {
@@ -188,10 +209,6 @@ nav a.active {
   color: #1d4ed8;
   font-weight: 900;
   font-size: 14px;
-}
-
-.hero {
-  background: linear-gradient(135deg, #ffffff 0%, #eff6ff 100%);
 }
 
 .hero h1 {
@@ -230,84 +247,143 @@ nav a.active {
   border: 1px solid #2563eb;
 }
 
-.section h2 {
-  margin-top: 0;
-  margin-bottom: 28px;
-  padding-left: 16px;
-  border-left: 6px solid #2563eb;
-  border-bottom: none;
-  color: #0f172a;
-  font-size: 30px;
-  font-weight: 900;
-  line-height: 1.2;
-}
-
 /* 자기소개 */
 .intro-list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 10px;
 }
 
 .intro-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  column-gap: 12px;
+  align-items: start;
   width: 100%;
-  padding: 12px 18px;
-  background: #eeeeee;
-  border-radius: 5px;
-  border: none;
+  padding: 13px 18px;
+  background: #f1f5f9;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
   transition: 0.2s;
 }
 
 .intro-item:hover {
-  background: #e9edf5;
+  background: #eff6ff;
+  border-color: #93c5fd;
+  transform: translateX(4px);
 }
 
 .intro-arrow {
-  font-size: 32px;
-  font-weight: 700;
   color: #2563eb;
-  line-height: 1;
-  padding-top: 1px;
-  flex-shrink: 0;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1.45;
 }
 
 .intro-item p {
   margin: 0;
   color: #374151;
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.75;
 }
 
-.skill-list,
-.experience-grid {
+/* 기술 스택 */
+.tech-board {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 18px;
+  padding: 22px;
+  border-radius: 18px;
+  background: #111827;
 }
 
-.skill-box,
-.mini-project {
-  padding: 22px;
-  border-radius: 16px;
-  background: #fbfdff;
-  border: 1px solid #dbeafe;
+.tech-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tech-label {
+  width: fit-content;
+  padding: 6px 13px;
+  border-radius: 999px;
+  color: white;
+  font-size: 13px;
+  font-weight: 900;
+  margin-bottom: 4px;
+}
+
+.tech-label.main {
+  background: #2563eb;
+}
+
+.tech-label.sub {
+  background: #3b82f6;
+}
+
+.tech-label.light {
+  background: #60a5fa;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #1f2937;
+  color: #e5e7eb;
+  font-size: 15px;
   transition: 0.2s;
 }
 
-.skill-box:hover,
-.mini-project:hover,
-.project-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.08);
+.tech-item:hover {
+  background: #263244;
+  transform: translateX(4px);
 }
 
-.skill-box h3,
-.mini-project h3 {
-  margin-top: 0;
+.tech-item span {
+  font-size: 18px;
+}
+
+.tech-item strong {
+  font-weight: 900;
+}
+
+/* 자격증 */
+.cert-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.cert-item {
+  display: block;
+  padding: 22px;
+  border-radius: 18px;
+  background: #fbfdff;
+  border: 1px solid #dbeafe;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.cert-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.08);
+  border-color: #93c5fd;
+}
+
+.cert-item strong {
+  display: block;
+  margin-bottom: 8px;
   color: #2563eb;
+  font-size: 18px;
+}
+
+.cert-item span {
+  color: #64748b;
+  font-size: 14px;
 }
 
 /* 주요 프로젝트 */
@@ -321,6 +397,12 @@ nav a.active {
   background: linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
   border: 1px solid #dbeafe;
   transition: 0.2s;
+}
+
+.project-card:hover,
+.mini-project:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.08);
 }
 
 .thumb {
@@ -343,6 +425,11 @@ nav a.active {
   height: 100%;
   object-fit: contain;
   display: block;
+  transition: 0.3s;
+}
+
+.project-card:hover .thumb img {
+  transform: scale(1.03);
 }
 
 .project-type {
@@ -383,6 +470,27 @@ nav a.active {
   line-height: 1.7;
 }
 
+/* 구현 경험 */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.mini-project {
+  padding: 22px;
+  border-radius: 16px;
+  background: #fbfdff;
+  border: 1px solid #dbeafe;
+  border-left: 4px solid #2563eb;
+  transition: 0.2s;
+}
+
+.mini-project h3 {
+  margin-top: 0;
+  color: #2563eb;
+}
+
 .mini-project span {
   display: inline-block;
   background: #dbeafe;
@@ -395,6 +503,7 @@ nav a.active {
   font-weight: 800;
 }
 
+/* 연락처 */
 .contact p {
   font-size: 16px;
 }
@@ -409,6 +518,7 @@ nav a.active {
   text-decoration: underline;
 }
 
+/* 반응형 */
 @media (max-width: 950px) {
   .topbar {
     justify-content: space-between;
@@ -432,7 +542,8 @@ nav a.active {
     position: static;
   }
 
-  .skill-list,
+  .tech-board,
+  .cert-list,
   .experience-grid {
     grid-template-columns: 1fr;
   }
